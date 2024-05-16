@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1082930911070",
+    "project_id": "email-agenda",
+    "storage_bucket": "email-agenda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082930911070:android:38a9f64a08a8237524e1cf",
+        "android_client_info": {
+          "package_name": "fes.aragon.emailagenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082930911070-rervb93no640iu0s4e8k7rcraini8phf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fes.aragon.emailagenda",
+            "certificate_hash": "ffb7b602dceb5c87b5448195802a3dbef163e8a4"
+          }
+        },
+        {
+          "client_id": "1082930911070-adi463e59v4763j0avrp5931q8cg6403.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFr6qNdgtyqPOAPXehIeVWjK2xqD3DEac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082930911070-adi463e59v4763j0avrp5931q8cg6403.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
