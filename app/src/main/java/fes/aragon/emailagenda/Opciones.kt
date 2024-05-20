@@ -53,6 +53,12 @@ class Opciones : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
+
+        binding.agregarBtn.setOnClickListener {
+            startActivity(Intent(this, AgregarContactoActivity::class.java))
+            finish()
+        }
+
         // Google
         if (provedor == TipoProvedor.GOOGLE.name) {
             googleSingInOption = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

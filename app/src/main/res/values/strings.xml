@@ -9,4 +9,9 @@
     <string name="contrasenia">Contraseña</string>
     <string name="log_in">Log In</string>
     <string name="create_account">Create Account</string>
+    <string name="agregar_contacto">Agregar Contacto</string>
+    <string name="ver_contactos">Ver Contactos</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">Email</string>
+    <string name="guardar">Guardar</string>
 </resources>
