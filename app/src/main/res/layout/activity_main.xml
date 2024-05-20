@@ -7,13 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/google_oauth_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:drawableLeft="@drawable/ic_google"
+        android:backgroundTint="@color/boton"
+        android:text="@string/google"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:flow_horizontalBias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
