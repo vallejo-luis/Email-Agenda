@@ -56,12 +56,10 @@ class Opciones : AppCompatActivity() {
 
         binding.agregarBtn.setOnClickListener {
             startActivity(Intent(this, AgregarContactoActivity::class.java))
-            finish()
         }
 
         binding.verContactosBtn.setOnClickListener {
             startActivity(Intent(this, VisualizarContactosActivity::class.java))
-            finish()
         }
 
         // Google
