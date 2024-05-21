@@ -26,7 +26,12 @@ class FirastoreViewModel : ViewModel() {
             }
 
             // Convert the snapshot to a list of MyData objects
-            val dataList = snapshot?.toObjects(ContactosData::class.java)
+            val dataList = mutableListOf<ContactosData>()
+            for (document in snapshot!!.documents) {
+                val dataObject = document.toObject(ContactosData::class.java)
+                dataObject?.id = document.id
+                dataList.add(dataObject!!)
+            }
 
             // Update the LiveData with the new data
             _data.value = dataList

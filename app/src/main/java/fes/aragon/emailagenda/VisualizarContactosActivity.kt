@@ -8,15 +8,9 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.marginTop
-import androidx.core.view.setPadding
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -48,6 +42,8 @@ class VisualizarContactosActivity : AppCompatActivity() {
             data.forEach { dataObject ->
                 // Crea el CardView donde se almacenara la info de cada contacto
                 val cardView = CardView(this)
+
+                cardView.tag = dataObject.id
 
                 // Layout manager para dar formato
                 val layoutManager = LinearLayoutManager(this)
@@ -91,7 +87,19 @@ class VisualizarContactosActivity : AppCompatActivity() {
 
                 // Logica para eliminar los contactos
                 deleteButton.setOnClickListener {
+                    val documentId = cardView.tag as String
 
+                    val user = FirebaseAuth.getInstance().currentUser
+                    val email = user?.email
+                    val db = Firebase.firestore
+                    val contactosRef = db.collection("usrs").document(email.toString())
+                        .collection("contactos")
+
+                    contactosRef.document(documentId).delete().addOnSuccessListener {
+                        Toast.makeText(this, "Contacto eliminado", Toast.LENGTH_SHORT).show()
+                    } .addOnFailureListener {
+                        Toast.makeText(this, "Error al eliminar contacto", Toast.LENGTH_SHORT).show()
+                    }
                 }
 
                 // Se agrega el linearlayout al cardview
