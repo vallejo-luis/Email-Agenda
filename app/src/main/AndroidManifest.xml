@@ -15,6 +15,9 @@
         android:theme="@style/Theme.EmailAgenda"
         tools:targetApi="31">
         <activity
+            android:name=".VisualizarContactosActivity"
+            android:exported="false" />
+        <activity
             android:name=".AgregarContactoActivity"
             android:exported="false" />
         <activity
