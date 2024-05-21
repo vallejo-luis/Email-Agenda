@@ -15,4 +15,5 @@
     <string name="email">Email</string>
     <string name="guardar">Guardar</string>
     <string name="numero">Número</string>
+    <string name="contactos">Contactos</string>
 </resources>
