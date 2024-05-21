@@ -30,7 +30,7 @@ class AgregarContactoActivity : AppCompatActivity() {
             val contacto = hashMapOf(
                 "correo" to binding.correoContacto.text.toString(),
                 "nombre" to binding.nombreContacto.text.toString(),
-                "telefoto" to binding.telefonoContacto.text.toString(),
+                "telefono" to binding.telefonoContacto.text.toString(),
             )
 
             contactosRef.add(contacto).addOnCompleteListener {
