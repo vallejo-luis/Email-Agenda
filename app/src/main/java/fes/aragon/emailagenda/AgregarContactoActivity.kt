@@ -40,9 +40,9 @@ class AgregarContactoActivity : AppCompatActivity() {
             }
 
             // Limpiar los campos después de agregar el contacto
-            binding.correoContacto.text = ""
-            binding.nombreContacto.text = ""
-            binding.telefonoContacto.text = ""
+            binding.correoContacto.setText("")
+            binding.nombreContacto.setText("")
+            binding.telefonoContacto.setText("")
         }
     }
 }
