@@ -59,6 +59,11 @@ class Opciones : AppCompatActivity() {
             finish()
         }
 
+        binding.verContactosBtn.setOnClickListener {
+            startActivity(Intent(this, VisualizarContactosActivity::class.java))
+            finish()
+        }
+
         // Google
         if (provedor == TipoProvedor.GOOGLE.name) {
             googleSingInOption = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
